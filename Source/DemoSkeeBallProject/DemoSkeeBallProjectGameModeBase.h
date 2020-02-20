@@ -13,8 +13,15 @@ UCLASS()
 class DEMOSKEEBALLPROJECT_API ADemoSkeeBallProjectGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
-	
-	
+
+private:
+	int m_iScore;
+public:
+	void BeginPlay() override;
+
+	UFUNCTION(BlueprintCallable)
+	int GetScore();
+	UFUNCTION(BlueprintCallable)
+	void SetScore(int newScore);	
 	
 };

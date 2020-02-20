@@ -3,5 +3,15 @@
 #include "DemoSkeeBallProjectGameModeBase.h"
 
 
+void ADemoSkeeBallProjectGameModeBase::BeginPlay() {
+	SetScore(0);
+}
 
+int ADemoSkeeBallProjectGameModeBase::GetScore() {
+	return m_iScore;
+}
+
+void ADemoSkeeBallProjectGameModeBase::SetScore(int newScore = 0) {
+	m_iScore = newScore;
+}
 
