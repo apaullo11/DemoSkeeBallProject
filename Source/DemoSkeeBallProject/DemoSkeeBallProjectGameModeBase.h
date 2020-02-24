@@ -15,10 +15,12 @@ class DEMOSKEEBALLPROJECT_API ADemoSkeeBallProjectGameModeBase : public AGameMod
 	GENERATED_BODY()
 
 private:
-	int m_iScore;
-	int m_iWinScore;
 public:
 	ADemoSkeeBallProjectGameModeBase();
+
+	int m_iScore;
+	int m_iWinScore;
+	bool m_bHasPlayerWon;
 
 	void BeginPlay() override;
 

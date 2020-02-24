@@ -4,6 +4,7 @@
 
 ADemoSkeeBallProjectGameModeBase::ADemoSkeeBallProjectGameModeBase() {
 	m_iWinScore = 100;
+	m_bHasPlayerWon = false;
 }
 
 void ADemoSkeeBallProjectGameModeBase::BeginPlay() {
@@ -17,8 +18,5 @@ int ADemoSkeeBallProjectGameModeBase::GetScore() {
 void ADemoSkeeBallProjectGameModeBase::SetScore(int newScore = 0) {
 	m_iScore = newScore;
 
-	if (m_iScore >= m_iWinScore) {
-
-	}
 }
 

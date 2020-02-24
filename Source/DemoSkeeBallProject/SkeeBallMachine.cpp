@@ -2,6 +2,7 @@
 
 #include "SkeeBallMachine.h"
 #include "DemoSkeeBallProjectGameModeBase.h"
+#include "System/NLogger.h"
 
 ASkeeBallMachine::ASkeeBallMachine() {
 	// pointer to static mesh component
@@ -26,5 +27,15 @@ void ASkeeBallMachine::AddToScore(int points) {
 		int currScore = mode->GetScore();
 		// add to score
 		mode->SetScore(currScore + points);
+
+		m_bHasPlayerWon = (mode->m_iScore >= mode->m_iWinScore);
 	}
 }
+
+void ASkeeBallMachine::DefaultThink() {
+	if (m_bHasPlayerWon) {
+		Msg("You Won!");
+	}
+
+}
+
