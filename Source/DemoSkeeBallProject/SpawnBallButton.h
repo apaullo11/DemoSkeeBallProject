@@ -21,6 +21,8 @@ class DEMOSKEEBALLPROJECT_API ASpawnBallButton : public AWorldButton
 public:
 	ASpawnBallButton();
 
+	int m_iSkeeBallIndex;
+
 	virtual void OnPressed_Implementation(ABaseController*) override;
 	
 	

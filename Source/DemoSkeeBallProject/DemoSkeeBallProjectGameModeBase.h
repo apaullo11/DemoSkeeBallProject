@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "System/EHandle.h"
 #include "DemoSkeeBallProjectGameModeBase.generated.h"
 
 /**
@@ -21,6 +22,8 @@ public:
 	int m_iScore;
 	int m_iWinScore;
 	bool m_bHasPlayerWon;
+
+	TArray<EHANDLE> m_aESkeeBalls;
 
 	void BeginPlay() override;
 
