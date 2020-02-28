@@ -12,6 +12,8 @@ ASpawnBallButton::ASpawnBallButton() {
 	m_pSpawnLocationMesh->SetStaticMesh(mesh);
 
 	m_iSkeeBallIndex = 0;
+
+	m_pSpawnLocationMesh->SetHiddenInGame(true);
 }
 
 void ASpawnBallButton::OnPressed_Implementation(ABaseController* pController) {
